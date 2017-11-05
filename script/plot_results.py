@@ -8,9 +8,9 @@ import matplotlib.pyplot as plot
 
 parser = argparse.ArgumentParser()
 parser.add_argument(dest="initial_poses", default="",
-                    help="The filename that contains the original poses.")
+                    help="The filename that contains the original poses")
 parser.add_argument(dest="optimized_poses", default="",
-                    help="The filename that contains the optimized poses.")
+                    help="The filename that contains the optimized poses")
 args = parser.parse_args()
 
 poses_original = None
