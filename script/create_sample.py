@@ -20,13 +20,13 @@ num_nodes = args.nodes
 drift_coeff = args.drift
 
 vertices = []
-delta_theta = 2 * math.pi * (1 - drift_coeff) / num_nodes
+delta_theta = 2 * math.pi / num_nodes
 delta_length = 2 * math.pi * radius / num_nodes
 
 for i in xrange(num_nodes):
-    x = radius * math.cos(delta_theta * i + np.random.normal(0, math.pi / 90.0))
-    y = radius * math.sin(delta_theta * i + np.random.normal(0, math.pi / 90.0))
-    theta = math.pi / 2 + delta_theta * i + np.random.normal(0, math.pi / 90.0)
+    x = (radius + radius * i * drift_coeff / num_nodes) * math.cos(delta_theta * i + np.random.normal(0, math.pi / 180.0))
+    y = (radius + radius * i * drift_coeff / num_nodes) * math.sin(delta_theta * i + np.random.normal(0, math.pi / 180.0))
+    theta = delta_theta * i + np.random.normal(0, math.pi / 180.0)
     vertices.append(["VERTEX_SE2", i, x, y, theta])
 
 constraint = []
