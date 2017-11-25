@@ -24,9 +24,9 @@ delta_theta = 2 * math.pi / num_nodes
 delta_length = 2 * math.pi * radius / num_nodes
 
 for i in xrange(num_nodes):
-    x = (radius + radius * i * drift_coeff / num_nodes) * math.cos(delta_theta * i + np.random.normal(0, math.pi / 180.0))
-    y = (radius + radius * i * drift_coeff / num_nodes) * math.sin(delta_theta * i + np.random.normal(0, math.pi / 180.0))
-    theta = delta_theta * i + np.random.normal(0, math.pi / 180.0)
+    x = (radius + radius * i * drift_coeff / num_nodes) * math.cos(delta_theta * i + np.random.normal(0, 0))
+    y = (radius + radius * i * drift_coeff / num_nodes) * math.sin(delta_theta * i + np.random.normal(0, 0))
+    theta = delta_theta * i + np.random.normal(0, 0)
     vertices.append(["VERTEX_SE2", i, x, y, theta])
 
 constraint = []
