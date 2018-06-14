@@ -2,14 +2,14 @@
 
 Sample codes to conduct 2D pose graph optimization with Ceres Solver.
 
-# Dependences
+## Dependences
 
 - Eigen 3.3 or later
 - Ceres Solver 1.12.0 or later
 - Gflags 2.2.0 or later
 - Python with matplotlib
 
-# Build
+## Build
 
 ```bash
 $ git clone https://github.com/shinsumicco/pose-graph-optimization.git
@@ -20,7 +20,7 @@ $ cmake ..
 $ make -j4
 ```
 
-# Optimize
+## Optimize
 
 ```bash
 $ cd pose-graph-optimization/build
@@ -71,7 +71,7 @@ Termination:                      CONVERGENCE (Function tolerance reached. |cost
 
 ```
 
-# Visualize
+## Visualize
 
 ```bash
 $ cd pose-graph-optimization
