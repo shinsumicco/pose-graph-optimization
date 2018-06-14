@@ -29,7 +29,5 @@ if poses_optimized is not None:
     plot.plot(poses_optimized[:, 0], poses_optimized[:, 1], '-', label="Optimized", alpha=0.5, color="blue")
 
 plot.axis('equal')
-plot.xlim([-65, 65])
-plot.ylim([-65, 25])
 plot.legend()
 plot.show()
